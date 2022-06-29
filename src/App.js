@@ -11,8 +11,10 @@ const urlGithub = 'https://github.com/emasetto';
 const App = () => {
 
     const handlePressGoToGitHub = async () => {
-        console.log('Verificando Link')
+        console.log('Verificando Link');
         const res = await Linking.canOpenURL(urlGithub);
+        console.log('Link Aprovado');
+        console.log('Abrindo Link....');
         if (res){
             Linking.openURL(urlGithub)
         }
